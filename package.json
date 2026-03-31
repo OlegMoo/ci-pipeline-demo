@@ -6,6 +6,9 @@
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
+  "jest": {
+    "coverageReporters": ["json-summary", "text", "lcov"]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
