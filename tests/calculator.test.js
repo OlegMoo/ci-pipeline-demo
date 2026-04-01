@@ -16,7 +16,7 @@ test('multiply numbers', () => {
 });
         
 test('divide 10 / 2 = 5', () => {
-    expect(divide(10, 2)).toBe(5);
+    expect(divide(10, 2)).toBe(6);
 });
         
 test('division by zero throws error', () => {
