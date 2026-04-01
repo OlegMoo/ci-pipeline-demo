@@ -20,7 +20,12 @@ jobs:
       # 4. Запустити тести + coverage
       - name: Run tests with coverage
         run: npm run test:coverage
-
+      
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2
+        env:
+           SONAR_TOKEN: ${{ 8253196ead92342eaaa0f310890821257c59bfd7 }}
+        
       # 5. Показати coverage прямо в логах (ВАЖЛИВО для демо)
       - name: Print coverage %
         run: |
