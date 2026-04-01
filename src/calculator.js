@@ -23,5 +23,12 @@ function divide(a, b) {
 function power(a, b) {
     return a ** b;
 }
-    
-module.exports = { add, subtract, multiply, divide, power };
+
+function mod(a, b) {
+    if (b === 0) {
+        throw new Error("Division by zero");
+    }
+    return a % b;
+}
+
+module.exports = { add, subtract, multiply, divide, power, mod };
