@@ -4,6 +4,9 @@ on:
     branches:
       - develop
       - feature/**
+  pull_request:
+    branches:
+      - develop  
 jobs:
   test-and-metrics:
     runs-on: ubuntu-latest
