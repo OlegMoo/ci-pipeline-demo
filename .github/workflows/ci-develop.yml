@@ -1,5 +1,9 @@
-name: Simple CI
-on: [push, pull_request]
+name: CI-Develop
+on: 
+  push:
+    branches:
+      - develop
+      - feature/**
 jobs:
   test-and-metrics:
     runs-on: ubuntu-latest
@@ -21,11 +25,6 @@ jobs:
       - name: Run tests with coverage
         run: npm run test:coverage
       
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v2
-        env:
-           SONAR_TOKEN: ${{ secrets. SONARCLOUD_TOKEN }}
-        
       # 5. Показати coverage прямо в логах (ВАЖЛИВО для демо)
       - name: Print coverage %
         run: |
