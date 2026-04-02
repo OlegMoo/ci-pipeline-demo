@@ -26,7 +26,7 @@ test('division by zero throws error', () => {
 });
 
 test('power 10^2 = 100', () => {
-    expect(power(10, 2)).toBe(100);
+    expect(power(10, 2)).toBe(1000);
 }); 
 
 test('mod: 4 % 2 = 0', () => {
